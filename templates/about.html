@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Dance Form Classifier</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='about.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <ul class="nav-list1">
+            <li>
+              <p style="font-size: 20px">Dance Form Classifier</p>
+            </li>
+          </ul>
+          <ul class="nav-list">
+            <li>
+              <a
+                href="{{ url_for('home') }}"
+                class="nav-link"
+                style="font-size: 20px"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ url_for('contact') }}"
+                class="nav-link"
+                style="font-size: 20px"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="abouts">
+        <h3>About Dance Form Classification</h3>
+        <p>
+          The Dance Form Classification project aims to accurately identify and
+          classify various dance forms using advanced machine learning
+          techniques. This initiative harnesses the power of deep learning and
+          computer vision to analyze images of dancers, enabling users to
+          recognize different styles of dance effectively. By employing
+          convolutional neural networks (CNNs) trained on a comprehensive
+          dataset of dance images, the system can detect and classify various
+          dance forms with high precision.
+        </p>
+        <p>
+          Once an image of a dance performance is uploaded, the system utilizes
+          sophisticated algorithms to analyze visual patterns and movements. The
+          deep learning models have been designed to recognize subtle
+          differences in dance styles, costumes, and postures, allowing for
+          precise identification. The classification process is performed
+          rapidly, providing users with immediate feedback that helps them
+          understand and appreciate the diversity of dance forms.
+        </p>
+        <div class="image-grid-container">
+          <h3>Major Dance Forms</h3>
+          <div class="image-grid">
+            <div class="image-item">
+              <img
+                src="{{ url_for('static', filename='images/Bharatanatyam.jpg') }}"
+                alt="Alternaria solani"
+              />
+              <p>Bharatanatyam</p>
+            </div>
+            <div class="image-item">
+              <img
+                src="{{ url_for('static', filename='images/Kathak.jpg') }}"
+                alt="Bacterial Canker"
+              />
+              <p>Kathak</p>
+            </div>
+            <div class="image-item">
+              <img
+                src="{{ url_for('static', filename='images/kathakali.jpeg') }}"
+                alt="Bacterial spot"
+              />
+              <p>Kathakali</p>
+            </div>
+            <div class="image-item">
+              <img
+                src="{{ url_for('static', filename='images/Kuchipudi.jpg') }}"
+                alt="EarlyBlight"
+              />
+              <p>Kuchipudi</p>
+            </div>
+            <div class="image-item">
+              <img
+                src="{{ url_for('static', filename='images/manipuri.jpg') }}"
+                alt="Gray spot"
+              />
+              <p>Manipuri</p>
+            </div>
+            <div class="image-item">
+              <img
+                src="{{ url_for('static', filename='images/Mohiniyattom.jpg') }}"
+                alt="Leaf curl"
+              />
+              <p>Mohiniyattom</p>
+            </div>
+            <div class="image-item">
+              <img
+                src="{{ url_for('static', filename='images/Odissi.jpg') }}"
+                alt="powdery mildew"
+              />
+              <p>Odissi</p>
+            </div>
+            <div class="image-item">
+              <img
+                src="{{ url_for('static', filename='images/Sattriya.jpg') }}"
+                alt="YellowCurl"
+              />
+              <p>Sattriya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Dance Form Classifier. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
