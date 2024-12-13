@@ -42,10 +42,8 @@ class DanceClassificationModel(nn.Module):
 model = DanceClassificationModel(num_classes=8)
 
 # Load model weights
-model_path = (
-    'F:\projects\Dance form classification/'
-    'dance_classification_model.pth'
-)
+model_path = './dance_classification_model.pth'
+
 model.load_state_dict(torch.load(model_path, map_location='cpu'), strict=False)
 model.eval()  # Set the model to evaluation mode
 
@@ -150,4 +148,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
