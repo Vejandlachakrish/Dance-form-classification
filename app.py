@@ -9,6 +9,7 @@ import logging
 import torch.nn as nn
 from torchvision import models
 from threading import Lock
+from waitress import serve 
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
@@ -148,4 +149,6 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    # app.run(debug=True)
+    # serve(app, host='0.0.0.0', port=5000)
+    serve(app, host='127.0.0.1', port=8080)
